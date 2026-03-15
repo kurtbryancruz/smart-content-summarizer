@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Content Summarizer</title>
+
+    <!-- Link to our stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Google Fonts: Syne (display) + Instrument Serif (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Instrument+Serif:ital@0;1&family=DM+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Background decorative blobs -->
+    <div class="bg-blob blob-1"></div>
+    <div class="bg-blob blob-2"></div>
+    <div class="bg-blob blob-3"></div>
+
+    <!-- Main container -->
+    <main class="container">
+
+      <!-- Header section -->
+      <header class="header">
+        <div class="badge">AI-Powered</div>
+        <h1 class="title">Smart <em>Content</em><br/>Summarizer</h1>
+        <p class="subtitle">
+          Paste any long article below and get a clear,<br/>
+          3-point summary in seconds.
+        </p>
+      </header>
+
+      <!-- Input section -->
+      <section class="input-section">
+        <label for="article-input" class="input-label">
+          Paste your article here
+        </label>
+
+        <!-- The textarea where users paste their article -->
+        <textarea
+          id="article-input"
+          placeholder="Drop in a news article, blog post, research paper — anything long and wordy. We'll make it make sense."
+          rows="10"
+        ></textarea>
+
+        <!-- Character counter -->
+        <div class="char-count">
+          <span id="char-counter">0</span> characters
+        </div>
+
+        <!-- The Summarize button -->
+        <button id="summarize-btn" class="btn-summarize">
+          <span class="btn-text">Summarize</span>
+          <span class="btn-icon">→</span>
+        </button>
+      </section>
+
+      <!-- Loading indicator (hidden by default) -->
+      <!-- It appears while we wait for the AI response -->
+      <div id="loading" class="loading hidden">
+        <div class="loading-dots">
+          <span></span><span></span><span></span>
+        </div>
+        <p class="loading-text">Summarizing your article…</p>
+      </div>
+
+      <!-- Error message box (hidden by default) -->
+      <div id="error-box" class="error-box hidden">
+        <span class="error-icon">⚠</span>
+        <p id="error-message"></p>
+      </div>
+
+      <!-- Summary result section (hidden by default) -->
+      <!-- This is where the 3 bullet points will appear -->
+      <section id="result-section" class="result-section hidden">
+        <div class="result-header">
+          <span class="result-label">Summary</span>
+          <button id="copy-btn" class="btn-copy">Copy</button>
+        </div>
+
+        <!-- The 3 bullet points will be injected here by script.js -->
+        <ul id="summary-list" class="summary-list"></ul>
+      </section>
+
+    </main>
+
+    <!-- Link to our JavaScript file -->
+    <!-- defer means it loads after the HTML is ready -->
+    <script src="script.js" defer></script>
+  </body>
+</html>

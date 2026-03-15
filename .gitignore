@@ -1,0 +1,26 @@
+# Secret environment variables — NEVER push this
+.env
+
+# Node.js dependencies folder — too large to push, npm install recreates it
+node_modules/
+
+# Mac system file
+.DS_Store
+
+# Windows system file
+Thumbs.db
+
+# Editor settings (optional but recommended)
+.vscode/
+```
+
+---
+
+## About `.env.example`
+
+The `.env.example` file is already created in your project. Its purpose is the **opposite** of `.gitignore` — you **do** want to push it to GitHub. It acts as a template that shows others what variables they need, without exposing your real key.
+
+Your `.env.example` should look exactly like this (placeholder, not real key):
+```
+OPENAI_API_KEY=your_openai_api_key_here
+PORT=3000
