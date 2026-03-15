@@ -41,8 +41,8 @@ Download from [https://nodejs.org](https://nodejs.org) — choose the **LTS** ve
 
 ### 2. Clone or download this project
 ```bash
-git clone https://github.com/your-username/smart-summarizer.git
-cd smart-summarizer
+git clone https://github.com/your-username/smart-content-summarizer.git
+cd smart-content-summarizer
 ```
 
 ### 3. Install dependencies
